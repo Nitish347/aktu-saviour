@@ -1,5 +1,7 @@
 import 'package:aktu/auth/login.dart';
 import 'package:aktu/auth/verify.dart';
+import 'package:aktu/branch.dart';
+import 'package:aktu/homepage/home.dart';
 import 'package:aktu/year.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +33,10 @@ class MyApp extends StatelessWidget {
       routes: {
           LoginPage.id :(context)=>LoginPage(),
           VerifyPage.id : (context)=>VerifyPage(),
-        Year.id : (context) => Year()
+        Year.id : (context) => Year(),
+        Branch.id : (context) => Branch(),
+        HomePage.id : (context) => HomePage()
+
       },
     );
   }
