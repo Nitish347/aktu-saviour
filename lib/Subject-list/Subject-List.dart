@@ -23,7 +23,7 @@ class SubjectList extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-                padding: EdgeInsets.only(left: 10, top: height / 25),
+                padding: EdgeInsets.only(left: 10, top: height / 70),
                 child: IconButton(
                   onPressed: ()=>Navigator.pop(context),
                   icon: Icon(CupertinoIcons.back,
@@ -36,7 +36,7 @@ class SubjectList extends StatelessWidget {
               text: text!,
             ),),
             Container(
-              height: height/1.9,
+              height: height/1.77,
               child: ListView(
                 children: List.generate(Constants.subjects.length, (index) {
                   return SubjectListTile(

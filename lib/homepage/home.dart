@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                  padding: EdgeInsets.only(left: 20, top: height / 25),
+                  padding: EdgeInsets.only(left: 20, top: height /40),
                   child: Icon(
                     CupertinoIcons.bars,
                     size: 35,
@@ -70,18 +70,21 @@ class _HomePageState extends State<HomePage> {
               // ),
               Padding(
                   padding:
-                      EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 5),
+                      EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 20),
                   child: Quote(
                     size: 20,
                     img: "asset/images/2.png",
                     text: "this is for daily quotes!!",
                   )),
+
               Container(
-                margin: EdgeInsets.all(20),
+                height: height/1.7,
+
+                // margin: EdgeInsets.all(20),
                 child: GridView.count(
                     crossAxisCount: 2,
-                    crossAxisSpacing: 40,
-                    mainAxisSpacing: 40,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
                     shrinkWrap: true,
                     // padding: EdgeInsets.all(20),
 

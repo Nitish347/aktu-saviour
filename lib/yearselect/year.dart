@@ -31,75 +31,77 @@ void checkOption(int index){
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(top: height / 15, left: 20),
-            child: Text(
-              "B.Tech",
-              style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
-                    shadows: Constants.neumorphic1,
-                      fontSize: height / 18, fontWeight: FontWeight.bold)),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10, left: 20),
-            child: Text("Select Year",
-                style: GoogleFonts.montserrat(
-                  textStyle: TextStyle(
-                    shadows: Constants.neumorphic1,
-                      fontSize: height / 35, fontWeight: FontWeight.w500),
-                )),
-          ),
-          SizedBox(
-            height: height /100,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-
-              child: GridView.count(
-                crossAxisCount: 2,
-                crossAxisSpacing: 40,
-                mainAxisSpacing: 40,
-                shrinkWrap: true,
-
-                scrollDirection: Axis.vertical,
-                physics: ClampingScrollPhysics(),
-                children:[
-                  for(int i=0;i<4;i++)
-                 grid(
-                   name: name[i],
-                   year: year[i],
-                   onTap: ()=> checkOption(i+1),
-                   selected: i+1 == optionSelected,
-
-                 )
-                ]
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: height / 26, left: 20),
+              child: Text(
+                "B.Tech",
+                style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      shadows: Constants.neumorphic1,
+                        fontSize: height / 18, fontWeight: FontWeight.bold)),
               ),
             ),
-          ),
-          SizedBox(height: 30,),
-          Center(child :
-    InkWell(
-      onTap: ()=>Navigator.pushNamed(context, Branch.id),
-      child: Container(
-              height: height/12,
-              width: width/6,
-              decoration: BoxDecoration(
-                boxShadow: Constants.neumorphic1,
-                borderRadius: BorderRadius.circular(50),
-               // gradient: Constants.purplegradient
-                color: Colors.white
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 20),
+              child: Text("Select Year",
+                  style: GoogleFonts.montserrat(
+                    textStyle: TextStyle(
+                      shadows: Constants.neumorphic1,
+                        fontSize: height / 35, fontWeight: FontWeight.w500),
+                  )),
+            ),
+            SizedBox(
+              height: height /100,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 40,
+                  mainAxisSpacing: 40,
+                  shrinkWrap: true,
+
+                  scrollDirection: Axis.vertical,
+                  physics: ClampingScrollPhysics(),
+                  children:[
+                    for(int i=0;i<4;i++)
+                   grid(
+                     name: name[i],
+                     year: year[i],
+                     onTap: ()=> checkOption(i+1),
+                     selected: i+1 == optionSelected,
+
+                   )
+                  ]
                 ),
-              child: Icon(Icons.arrow_forward_ios,size: 25,color: Colors.black,),
               ),
+            ),
+            SizedBox(height: 30,),
+            Center(child :
+    InkWell(
+        onTap: ()=>Navigator.pushNamed(context, Branch.id),
+        child: Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  boxShadow: Constants.neumorphic1,
+                  borderRadius: BorderRadius.circular(50),
+                 // gradient: Constants.purplegradient
+                  color: Colors.white
+                  ),
+                child: Icon(Icons.arrow_forward_ios,size: 25,color: Colors.black,),
+                ),
     ),
-          ),
+            ),
 
-        ],
+          ],
+        ),
       ),
     );
   }

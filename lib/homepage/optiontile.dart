@@ -16,8 +16,6 @@ class OptionTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-
-
         Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>SubjectList(
           img: images,
           text: selectedText,
@@ -26,6 +24,7 @@ class OptionTile extends StatelessWidget {
 
       },
       child: Container(
+        margin: EdgeInsets.all(20),
         height: 10,
         width: 5,
         decoration: BoxDecoration(

@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: Year(),
       routes: {
           LoginPage.id :(context)=>LoginPage(),
           VerifyPage.id : (context)=>VerifyPage(),

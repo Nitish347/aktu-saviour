@@ -1,10 +1,12 @@
+import 'package:aktu/branchselect/branch.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'constants/constants.dart';
 class StudentInfo extends StatelessWidget {
- final String? branch ="";
- final String? year ="";
+ static  String? branch ="";
+ static  String? year ="";
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class StudentInfo extends StatelessWidget {
      children: [
 
       Padding(
-       padding: EdgeInsets.only(top: height / 100, left: 20),
+       padding: EdgeInsets.only(left: 20),
        child: Row(
         children: [
          Text(
@@ -26,20 +28,23 @@ class StudentInfo extends StatelessWidget {
                   fontSize: height / 18,
                   fontWeight: FontWeight.bold)),
          ),
-         Text(
-          " (2nd Year)",
-          style: GoogleFonts.gowunBatang(
-              textStyle: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w500,
-                  shadows: Constants.neumorphic1)),
+         Padding(
+          padding: EdgeInsets.only(left: 10),
+           child: Text(
+            " (${Branch.selectedBranch})",
+            style: GoogleFonts.gowunBatang(
+                textStyle: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
+                    shadows: Constants.neumorphic1)),
+           ),
          ),
         ],
        ),
       ),
       Padding(
-       padding: const EdgeInsets.only(top: 10, left: 20),
-       child: Text("Select Branch",
+       padding: const EdgeInsets.only( left: 20),
+       child: Text("$branch",
            style: GoogleFonts.montserrat(
             textStyle: TextStyle(
                 shadows: Constants.neumorphic1,
