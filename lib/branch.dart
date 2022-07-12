@@ -64,7 +64,7 @@ class _BranchState extends State<Branch> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 20),
+              padding: const EdgeInsets.only(top: 10, left: 20),
               child: Text("Select Branch",
                   style: GoogleFonts.montserrat(
                     textStyle: TextStyle(

@@ -27,19 +27,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     List<String> branch = [
       "Notes",
-      "Previous Year \n Pappers",
+      "Previous Year \n       Pappers",
       "Quantum",
       "Video Lecrtures",
-      "Practice"
+      "Practice",
+      "Others"
     ];
-    List<String> images = [
-      "asset/images/electrical.jpg",
-      "asset/images/electrical.jpg",
-      "asset/images/electrical.jpg",
-      "asset/images/electrical.jpg",
-      "asset/images/electrical.jpg"
-    ];
-    List<MaterialAccentColor> colorss =[Colors.deepPurpleAccent,Colors.purpleAccent,Colors.deepOrangeAccent,Colors.greenAccent,Colors.lightGreenAccent];
+
+    List<String> images = ["asset/images/bb1.jpeg","asset/images/bb5.jpeg","asset/images/bb8.jpeg","asset/images/bb4.jpeg","asset/images/b3.jpeg","asset/images/b4.jpeg",];
+    List<MaterialAccentColor> colorss =[Colors.deepPurpleAccent,Colors.deepPurpleAccent,Colors.purpleAccent,Colors.deepOrangeAccent,Colors.greenAccent,Colors.lightGreenAccent];
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -104,8 +100,9 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.vertical,
                   physics: ClampingScrollPhysics(),
                   children: [
-                    for (int i = 0; i < 5; i++)
+                    for (int i = 0; i < 6; i++)
                       OptionTile(
+                        images: images[i],
                         option: branch[i],
                         color: colorss[i],
                         onTap: () => checkOption(i + 1),

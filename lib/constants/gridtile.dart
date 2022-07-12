@@ -29,11 +29,11 @@ class grid extends StatelessWidget {
             Text(
               year!,
               style: GoogleFonts.poppins(
-                fontSize: 28, fontWeight: FontWeight.w500,),
+                fontSize: 28, fontWeight: FontWeight.w500,color: selected ?? false ? Colors.white : Colors.black),
             ),
             Text(name!, style: TextStyle(fontSize: 25,
               fontWeight: FontWeight.w500,
-              fontFamily: "cursive",),),
+              fontFamily: "cursive",color: selected ?? false ? Colors.white : Colors.black),),
 
           ],
         ),

@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("asset/images/bacc.jpg"),
+                    image: AssetImage("asset/images/bacc.jpeg"),
                     fit: BoxFit.cover)),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 1.50, sigmaY: 1.50),

@@ -19,6 +19,7 @@ class _QuoteState extends State<Quote> {
       height: height / 7,
       width: width,
       decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage("asset/images/2.png",),fit: BoxFit.fill),
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
               colors: [Colors.pinkAccent.withOpacity(0.6), Colors.pink]),
