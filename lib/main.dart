@@ -1,8 +1,9 @@
 import 'package:aktu/auth/login.dart';
 import 'package:aktu/auth/verify.dart';
-import 'package:aktu/branch.dart';
+import 'package:aktu/branchselect/branch.dart';
 import 'package:aktu/homepage/home.dart';
-import 'package:aktu/year.dart';
+import 'package:aktu/Subject-list/Subject-List.dart';
+import 'package:aktu/yearselect/year.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,13 +30,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: HomePage(),
       routes: {
           LoginPage.id :(context)=>LoginPage(),
           VerifyPage.id : (context)=>VerifyPage(),
         Year.id : (context) => Year(),
         Branch.id : (context) => Branch(),
-        HomePage.id : (context) => HomePage()
+        HomePage.id : (context) => HomePage(),
+        SubjectList.id : (context) =>SubjectList(),
 
       },
     );

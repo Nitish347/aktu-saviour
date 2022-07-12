@@ -4,7 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 import '../constants/constants.dart';
 
 class Quote extends StatefulWidget {
-  const Quote({Key? key}) : super(key: key);
+   String text="";
+   String img ="";
+    double? size ;
+  Quote({required this.img,required this.text, this.size});
 
   @override
   _QuoteState createState() => _QuoteState();
@@ -19,16 +22,14 @@ class _QuoteState extends State<Quote> {
       height: height / 7,
       width: width,
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage("asset/images/2.png",),fit: BoxFit.fill),
+        image: DecorationImage(image: AssetImage(widget.img,),fit: BoxFit.fill),
           borderRadius: BorderRadius.circular(20),
-          gradient: LinearGradient(
-              colors: [Colors.pinkAccent.withOpacity(0.6), Colors.pink]),
           boxShadow: Constants.neumorphic1),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
-          "This is for daily quotes!",
+          widget.text,
           style: GoogleFonts.gowunBatang(
-              textStyle: TextStyle(fontSize: 20, color: Colors.white),
+              textStyle: TextStyle(fontSize: widget.size!, color: Colors.white),
               fontWeight: FontWeight.w700),
         )
       ]),

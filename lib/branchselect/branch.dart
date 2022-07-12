@@ -1,9 +1,9 @@
-import 'package:aktu/constants/gridtile.dart';
+import 'package:aktu/yearselect/gridtile.dart';
 import 'package:aktu/homepage/home.dart';
-import 'package:aktu/year.dart';
+import 'package:aktu/yearselect/year.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'constants/constants.dart';
+import '../constants/constants.dart';
 
 class Branch extends StatefulWidget {
   static String id = "branch";

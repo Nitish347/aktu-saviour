@@ -48,7 +48,7 @@ class _VerifyPageState extends State<VerifyPage> {
                       Padding(
                         padding: EdgeInsets.all(25.0),
                         child: Container(
-                          height: 60,
+                          height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
                               color: Colors.grey.withOpacity(0.6)
@@ -70,6 +70,7 @@ class _VerifyPageState extends State<VerifyPage> {
 
 
                               decoration: InputDecoration(
+                                counterText: "",
 
 
                                   border: InputBorder.none,

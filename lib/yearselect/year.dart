@@ -1,6 +1,6 @@
-import 'package:aktu/branch.dart';
+import 'package:aktu/branchselect/branch.dart';
 import 'package:aktu/constants/constants.dart';
-import 'package:aktu/constants/gridtile.dart';
+import 'package:aktu/yearselect/gridtile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
