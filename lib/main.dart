@@ -1,19 +1,38 @@
+
+
+// import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:aktu/auth/login.dart';
 import 'package:aktu/auth/verify.dart';
 import 'package:aktu/branchselect/branch.dart';
 import 'package:aktu/homepage/home.dart';
 import 'package:aktu/Subject-list/Subject-List.dart';
+import 'package:aktu/new.dart';
+import 'package:aktu/pdf-viewer.dart';
+import 'package:aktu/pdf.dart';
 import 'package:aktu/yearselect/year.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  // PDFApi.loadFirebase("python-practice-book.pdf");
+  runApp( MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+class MyApp extends StatefulWidget {
+
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  String? finalStatus;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,7 +49,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Year(),
+      home: LoginPage(),
       routes: {
           LoginPage.id :(context)=>LoginPage(),
           VerifyPage.id : (context)=>VerifyPage(),
@@ -42,4 +61,5 @@ class MyApp extends StatelessWidget {
       },
     );
   }
+ 
 }

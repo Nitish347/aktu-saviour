@@ -4,6 +4,7 @@ import 'package:aktu/yearselect/gridtile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 class Year extends StatefulWidget {
   static String id = " year";
@@ -85,7 +86,11 @@ void checkOption(int index){
             SizedBox(height: 30,),
             Center(child :
     InkWell(
-        onTap: ()=>Navigator.pushNamed(context, Branch.id),
+        onTap: () async{
+        Navigator.pushNamed(context, Branch.id);
+        // final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+        // sharedPreferences.setString("loginStatus", "jojojo");
+        print("ho gyaaa");},
         child: Container(
                 height: 70,
                 width: 70,

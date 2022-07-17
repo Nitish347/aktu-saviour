@@ -5,21 +5,23 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/constants.dart';
 class OptionTile extends StatelessWidget {
-  OptionTile({this.option,this.images,required this.color,this.selectedText});
+  OptionTile({this.option,this.images,required this.color,this.selectedText,required this.gridnum});
   final String? option;
    final List<Color> color;
  final String? selectedText;
   final String? images;
-
+ int gridnum;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>SubjectList(
-          img: images,
-          text: selectedText,
+          img: images!,
+          text: selectedText!,
            color12: color,
+          gridnum: gridnum,
+
         )));
 
       },

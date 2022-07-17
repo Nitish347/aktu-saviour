@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'constants/constants.dart';
 class StudentInfo extends StatelessWidget {
- static  String? branch ="";
- static  String? year ="";
+ static  String branch ="";
+ static  String year ="";
 
 
   @override
@@ -32,7 +32,7 @@ class StudentInfo extends StatelessWidget {
           padding: EdgeInsets.only(left: 10),
            child: Text(
             " (${Branch.selectedBranch})",
-            style: GoogleFonts.gowunBatang(
+            style: GoogleFonts.actor(
                 textStyle: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w500,

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298234087250",
+    "project_id": "aktu-23d57",
+    "storage_bucket": "aktu-23d57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298234087250:android:71ab08677a13cdd6939c8b",
+        "android_client_info": {
+          "package_name": "com.example.aktu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298234087250-av4j0mh1ot55o80ds8ou9ufe7f9g0b6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdzY_TVWB5V5Kj5e4ZxoI5TFg4wt5lhPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298234087250-av4j0mh1ot55o80ds8ou9ufe7f9g0b6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

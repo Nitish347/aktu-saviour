@@ -28,7 +28,7 @@ class _QuoteState extends State<Quote> {
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
           widget.text,
-          style: GoogleFonts.gowunBatang(
+          style: GoogleFonts.actor(
               textStyle: TextStyle(fontSize: widget.size!, color: Colors.white),
               fontWeight: FontWeight.w700),
         )

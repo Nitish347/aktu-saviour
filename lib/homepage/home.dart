@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                           images: images[i],
                           option: branch[i],
                           color: Constants.color[i],
-                          selectedText: Constants.options[i],
+                          selectedText: Constants.options[i],gridnum: i,
 
 
                         )
