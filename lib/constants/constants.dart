@@ -88,4 +88,127 @@ class Constants {
     "Practice",
     "Others"
   ];
+
+  static  Map<String, dynamic> result = {
+    "year": "2nd",
+    "branch": "CS",
+
+    "material": [
+      {
+        "subjects": "Maths IV",
+        "subjectcodes": "KAS302",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PL0c0N7xv8s05PwRatWCCTiDS3_7V_9O8a",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Technical Technical-1",
+        "subjectcodes": "KAS301",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PLaGBxvvw_eMUmtfG0Rh91ihVXTJDYB3Xq",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Universal Human values",
+        "subjectcodes": "KVE 301",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PL-xDzBkCcVN-RqidPb46a-_uTKVwMo6NP",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Data Structure",
+        "subjectcodes": "KCS301",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Computer Organization and Architecture ",
+        "subjectcodes": "KCS302",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PLxCzCOWd7aiHMonh3G6QNKq53C6oNXGrX",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Discrete Structures & Theory of Logic",
+        "subjectcodes": "KCS303",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PLTgUjV30iKbOV1wJOpFZATFGAEvcVhHPC",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Computer System Security",
+        "subjectcodes": "KNC301",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PL2heMq5vo28pMf_Ha2jSht18vQOrUYfof",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Python Programming",
+        "subjectcodes": "KNC302",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PL-JvKqQx2Atdcl4oTcRRR_ysMVwiCgdrK",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Operating Systems",
+        "subjectcodes": "KCS401",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PL_obO5Qb5QTE9s7QCNjqk97Q4UUgOseWP",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Theory of Automata and Formal Languages ",
+        "subjectcodes": "KCS402",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PL_obO5Qb5QTEihQ35PgzjZSh7PveVt-iF",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+      {
+        "subjects": "Microprocessor",
+        "subjectcodes": "KCS403",
+        "notes": ["url1", "url2"],
+        "papers": ["url1", "url2"],
+        "quantum": "url",
+        "video letures": "https://youtube.com/playlist?list=PLrjkTql3jnm8HbdMwBYIMAd3UdstWChFH",
+        "practice": ["url1", "url2", "url3"]
+
+      },
+
+    ],
+
+
+  };
+
 }
+

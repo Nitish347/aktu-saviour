@@ -50,6 +50,7 @@ dependencies:
   file_picker:
   path:
   path_provider:
+  webview_flutter: ^3.0.0
 
 
 dev_dependencies:

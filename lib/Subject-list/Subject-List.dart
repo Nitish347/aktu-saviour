@@ -43,12 +43,13 @@ class SubjectList extends StatelessWidget {
             Container(
               height: height / 1.77,
               child: ListView(
-                children: List.generate(Constants.subjects.length, (index) {
+                children: List.generate(Constants.result["material"].length, (index) {
                   return SubjectListTile(
-                    subCodes: Constants.subjectcodes[index],
-                    subjects: Constants.subjects[index],
+                    subCodes: Constants.result["material"][index]["subjectcodes"],
+                    subjects: Constants.result["material"][index]["subjects"],
                     color1: color12!,
-                    gridnum:gridnum! ,
+                    gridnum:gridnum!,
+                    index: index ,
                   );
                 }),
               ),

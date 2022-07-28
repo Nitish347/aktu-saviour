@@ -13,14 +13,16 @@ class SubjectListTile extends StatelessWidget {
   String subjects = "";
   String subCodes = "";
   List<Color> color1;
-  int gridnum ;
+  int gridnum;
+  int index;
   // MaterialAccentColor color2 ;
-  SubjectListTile(
-      {required this.subjects,
-      required this.subCodes,
-        required this.color1,
-        required this.gridnum,
-      });
+  SubjectListTile({Key? key,
+    required this.subjects,
+    required this.index,
+    required this.subCodes,
+    required this.color1,
+    required this.gridnum,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +30,40 @@ class SubjectListTile extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding:  EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+      padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
       child: InkWell(
-        onTap: (){
-          if(gridnum == 0)  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>NotesScreen(subject: subCodes)));
-          if(gridnum == 1)  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>PapersScreen()));
-          if(gridnum == 2)  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>QuantumScreen()));
-          if(gridnum == 3)  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>VideoLecture()));
-          if(gridnum == 4)  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>PracticeScreen()));
-          if(gridnum == 5)  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>OtherScreen()));
+        onTap: () {
+          if (gridnum == 0) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) =>
+                    NotesScreen(subject: Constants.subjects[index])));
+          }
+          if (gridnum == 1) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => PapersScreen()));
+          }
+          if (gridnum == 2) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => QuantumScreen()));
+          }
+          if (gridnum == 3) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => VideoLecture(
+                      url: Constants.result["material"][index]["video letures"]
+                          .toString(),
+                      subcode: subCodes,
+                      subname: subjects,
+                  colors: color1,
+                    )));
+          }
+          if (gridnum == 4) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => PracticeScreen()));
+          }
+          if (gridnum == 5) {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => OtherScreen()));
+          }
         },
         child: Container(
           height: height / 13,
@@ -53,7 +80,7 @@ class SubjectListTile extends StatelessWidget {
               textAlign: TextAlign.center,
               overflow: TextOverflow.fade,
               style: GoogleFonts.actor(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                   ),
@@ -65,7 +92,6 @@ class SubjectListTile extends StatelessWidget {
     );
   }
 }
-
 
 // Color.fromRGBO(77, 73, 108, 1),
 // Color.fromRGBO(227, 191, 253, .6),
